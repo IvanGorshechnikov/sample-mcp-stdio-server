@@ -665,6 +665,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_echo,
         "definition": {
             "name": "echo",
+            "title": "Echo / Ping",
             "description": "Echoes text back. Useful for connectivity checks.",
             "inputSchema": {
                 "type": "object",
@@ -677,6 +678,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_server_info,
         "definition": {
             "name": "server_info",
+            "title": "Server Information",
             "description": "Returns server version, active configuration and list of available tools.",
             "inputSchema": {"type": "object", "properties": {}},
         },
@@ -685,6 +687,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_list_cwd,
         "definition": {
             "name": "list_cwd",
+            "title": "List Working Directory",
             "description": (
                 "Lists files and directories in the server's working directory. "
                 "Also shows whether mcp-config.json was found and loaded. "
@@ -697,6 +700,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_weather,
         "definition": {
             "name": "weather",
+            "title": "Current Weather",
             "description": "Returns current weather conditions for any city. Source: wttr.in (no API key required).",
             "inputSchema": {
                 "type": "object",
@@ -711,6 +715,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_exchange_rates,
         "definition": {
             "name": "exchange_rates",
+            "title": "Live Exchange Rates",
             "description": (
                 "Returns live foreign exchange rates. Source: frankfurter.app (no API key). "
                 "Set as_sql=true to get INSERT statements ready to run in DBeaver."
@@ -731,6 +736,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_random_users,
         "definition": {
             "name": "random_users",
+            "title": "Random User Generator",
             "description": (
                 "Generates realistic fake user records (names, emails, locations). "
                 "Source: randomuser.me. Set as_sql=true for INSERT statements."
@@ -750,6 +756,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_countries,
         "definition": {
             "name": "countries",
+            "title": "Country Reference Data",
             "description": (
                 "Returns country reference data: capital, region, population, area, currency, language. "
                 "Source: restcountries.com. Great for seeding a countries/currencies table."
@@ -770,6 +777,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_crypto_prices,
         "definition": {
             "name": "crypto_prices",
+            "title": "Cryptocurrency Prices",
             "description": (
                 "Returns current cryptocurrency prices from CoinGecko (no API key). "
                 "Useful for financial SQL demos and seeding price tables."
@@ -790,6 +798,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_time_now,
         "definition": {
             "name": "time_now",
+            "title": "Current Date & Time",
             "description": "Returns the current date/time in any IANA timezone. Source: worldtimeapi.org.",
             "inputSchema": {
                 "type": "object",
@@ -803,6 +812,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_http_get,
         "definition": {
             "name": "http_get",
+            "title": "HTTP GET Request",
             "description": (
                 "Performs a GET request to any public JSON API and returns the response. "
                 "Set as_sql=true to convert the JSON response directly to SQL INSERT statements."
@@ -825,6 +835,7 @@ TOOLS: dict[str, dict] = {
         "handler": tool_to_sql_inserts,
         "definition": {
             "name": "to_sql_inserts",
+            "title": "Convert JSON to SQL INSERT Statements",
             "description": (
                 "Converts a JSON object or array of objects into SQL INSERT statements. "
                 "Works with any data – paste API response, CSV data as JSON, etc."
