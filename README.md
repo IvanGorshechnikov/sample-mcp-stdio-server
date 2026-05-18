@@ -4,12 +4,6 @@ An MCP server over **stdio** that fetches real-world data from free public APIs
 and converts it to SQL INSERT statements.  
 Designed to be registered as an external MCP server in **DBeaver**.
 
-## Quick start
-
-```bash
-python3 tools/mcp-stdio-test-server/server.py
-```
-
 ---
 
 ## Connection configuration
