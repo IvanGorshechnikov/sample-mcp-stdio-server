@@ -140,13 +140,3 @@ All data tools support `dialect`: `postgresql` / `mysql` / `sqlite` / `generic`.
 
 ---
 
-## Testing checklist
-
-```
-[ ] server_info    → see CWD, timeout, log_level, env vars, config_file
-[ ] list_cwd       → verify workingDirectory points to the right folder
-[ ] echo           → basic round-trip
-[ ] weather        → live API call (requires internet)
-[ ] exchange_rates → with as_sql=true, dialect=postgresql
-[ ] random_users   → with count=10, as_sql=true
-```
