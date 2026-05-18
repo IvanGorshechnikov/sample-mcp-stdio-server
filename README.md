@@ -1,4 +1,4 @@
-# DBeaver MCP Data Server
+# Sample MCP Data Server
 
 An MCP server over **stdio** that fetches real-world data from free public APIs
 and converts it to SQL INSERT statements.  
@@ -12,7 +12,7 @@ python3 tools/mcp-stdio-test-server/server.py
 
 ---
 
-## DBeaver connection configuration
+## Connection configuration
 
 Paste this JSON when adding an MCP server in DBeaver → Settings → AI → MCP:
 
@@ -31,11 +31,6 @@ configuration, or **`list_cwd`** to verify the working directory.
 
 ---
 
-## Configuration: three layers (lowest → highest priority)
-
-```
-mcp-config.json in CWD  <  Environment variables  <  CLI args
-```
 
 ### 1 · CLI arguments (`args`)
 
@@ -45,7 +40,7 @@ mcp-config.json in CWD  <  Environment variables  <  CLI args
 | `--offline` | flag | `false` | Use built-in stub data, no internet |
 | `--log-level LEVEL` | string | `normal` | `quiet` / `normal` / `verbose` |
 
-**DBeaver example — verbose logging with 5 s timeout:**
+**Example — verbose logging with 5 s timeout:**
 
 ```json
 {
@@ -59,7 +54,7 @@ mcp-config.json in CWD  <  Environment variables  <  CLI args
 }
 ```
 
-**DBeaver example — offline mode (no HTTP requests, stub data returned):**
+**Example — offline mode (no HTTP requests, stub data returned):**
 
 ```json
 {
